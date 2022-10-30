@@ -1,15 +1,17 @@
+$bgcolor: #011827;
+$buttoncolorred: #E3170A;
+$buttoncolorblue: #8ACFE5;
+$buttoncolorredmobile: #36769D;
+$markedcolor: #8ACFE5;
+$textcolor: #011827;
+
+
 *{
     padding: 0;
     margin: 0;
     font-family: "Roboto";
     max-width: 480px;
 }
-
-$bgcolor: #011827;
-$buttoncolorred: #E3170A;
-$buttoncolorblue: #8ACFE5;
-$markedcolor: #8ACFE5;
-$textcolor: #011827;
 
 header {
     background-color: $bgcolor;
@@ -76,10 +78,183 @@ header {
     }
 }
 
+@mixin blueButton {
+    background-color: $buttoncolorblue;
+    color: $textcolor;
+    width: 308px;
+    height: 66px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 24px; 
+    font-weight: bold;
+    display: block;
+    margin: 35px auto;
+    padding-bottom: 5px;
+}
 
+@mixin redButtonMobile {
+    background-color: #ffffff;
+    color: $buttoncolorredmobile;
+    text-decoration-line: underline;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto;
+    border: none;
+}
 
+@mixin redButton {
+    background-color: $buttoncolorred;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px; 
+    font-weight: bold;
+    display: block;
+}
+
+.blue-button{
+    @include blueButton();
+}
+
+.red-button {
+    @include redButtonMobile();
+}
 
 .quotes {
-    background-color: #ffffff;
+    height: 240px;
+    .headshotdiv1 {
+        background-color: #ffffff;
+    
+        .headshot {
+            height: auto;
+            width: 15%;
+            padding: 20px;
+            float: left;
+        }
+    
+    
+        i {
+            display: inline-block;
+            font-size: 24px;
+            max-width: 340px;
+            margin-top: 20px;
+    
+        }
+    
+        p {
+            display: inline-block;
+            font-size: 18px;
+            margin-left: 110px;
+        }
+    }
+}
 
+
+.headshotdiv2 {
+    visibility: hidden;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 0 auto;
+    width: 420px;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.challenges {
+    position: relative;
+    background-color: #ffffff;
+    display: flex;
+    height: 490px;
+    width: auto;
+    overflow-x: auto;
+    justify-content: start;
+    margin-left: 50px;
+    
+
+
+    .challenges1, .challenges2, .challenges3 {
+        width: 100%;
+        height: 446px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.25); 
+        flex-wrap: wrap;
+        margin: 20px;
+        -ms-overflow-style: none;  /*Hide scrollbar IE and Edge */
+        scrollbar-width: none;  /* Hide scrollbar Firefox */
+        
+
+        img {
+            height: auto;
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin: 0 auto;
+            width: 300px;
+            font-weight: 400;
+        }
+        
+        .rating {
+            margin-left: 20px;
+            margin-top: 5px;
+            width: 100%;
+
+            .imgstar {
+                height: auto;
+                width: 4%;
+                margin: 2px;
+            }
+    
+            .emptystar {
+                height: auto;
+                width: 4%;
+                margin: 2px;
+            }
+
+            h5 {
+                position: relative;
+                font-size: 14px;
+                display: inline-block;
+                font-weight: 400;
+                margin-left: 10px;
+                top: -4px;
+            }
+        }
+
+        
+
+        p {
+            font-size: 18px;
+            width: 328px;
+            margin: 0 auto;
+            padding: 17px;
+        }
+
+        button {
+            @include redButton ();
+            float: right;
+            margin-right: 18px;
+            margin-top: 18px;
+        }
+
+        
+        
+    }
+    
+}
+
+//Hide scrollbar Chrome/Safari/Opera
+.challenges::-webkit-scrollbar {
+    display:none;
+}
+
+#challenge-button {
+    margin-top: -15px;
 }

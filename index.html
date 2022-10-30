@@ -21,71 +21,83 @@
                 <li>Play on-site</li>
                 <li>The story</li>
                 <li>Contact us</li>
-            </ul>
-            
+            </ul> 
         </header>
 
         <img src="images/hackerbackground.png">
-        <button>Online challenges</button>
-        <button>On-site challenges</button>
 
+        <button class="blue-button">On-site challenges</button>
+        <button class="red-button">Online challenges</button>
+    
         <div class="quotes" name="quotes">
-            <img src="images/headshot.png">
-            <p>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</p>
-            <p>John Doe, visited us in September 2021</p>
-
-            <img src="images/headshot.png">
-            <p>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</p>
-            <p>John Doe, visited us in September 2021</p>
+            <div class="headshotdiv1">
+                <img class="headshot" src="images/headshot.png">
+                <i>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</i>
+                <p>John Doe, visited us in September 2021</p>
+            </div>
+            
+            <div class="headshotdiv2">
+                <img class="headshot" src="images/headshot.png">
+                <i>This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</i>
+                <p>John Doe, visited us in September 2021</p>
+            </div>  
         </div>
 
-        <div name="challenges">
-            <h2>Popular challenges right now</h2>
-            <img src="images/hackerbackground.png">
-            <h3>Title of room (on-site)</h3>
-                <div name="rating">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <h2>Popular challenges right now</h2>
+        <div class="challenges" name="challenges">   
+            <div style="order: 1"class="challenges1">
+                <img src="images/hackerbackground.png">
+                <h3>Title of room (on-site)</h3>
+                <div class="rating" name="rating">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="emptystar" src="images/emptystar.png">
+
                     <h5>2-6 participants</h5>
                 </div>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
                 <button>Book this room</button>
-
-                <h2>Popular challenges right now</h2>
-            <img src="images/hackerbackground.png">
-            <h3>Title of room (on-site)</h3>
-                <div name="rating">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            </div>
+            
+            <div style="order: 2"class="challenges2">
+                <img src="images/hackerbackground.png">
+                <h3>Title of room (on-site)</h3>
+                <div class="rating" name="rating">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="emptystar" src="images/emptystar.png">
                     <h5>2-6 participants</h5>
                 </div>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
                 <button>Book this room</button>
-
-                <h2>Popular challenges right now</h2>
-            <img src="images/hackerbackground.png">
-            <h3>Title of room (on-site)</h3>
-                <div name="rating">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            </div>
+            
+            <div style="order: 3" class="challenges3">
+                <img src="images/hackerbackground.png">
+                <h3>Title of room (on-site)</h3>
+                <div class="rating" name="rating">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="imgstar" src="images/boldstar.png">
+                    <img class ="emptystar" src="images/emptystar.png">
                     <h5>2-6 participants</h5>
                 </div>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
                 <button>Book this room</button>
-
-            <button>Online challenges</button>
-            <button>On-site challenges</button>
+            </div>   
         </div>
 
+        <div id="challenge-button">
+            <button class="blue-button">On-site challenges</button>
+            <button class="red-button">Online challenges</button>
+        </div>
+        
+        
         <div name="story">
             <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
             <button>Read the full story</button>
