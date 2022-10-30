@@ -1,4 +1,66 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Roboto";
+  max-width: 480px;
+}
+
+header {
+  background-color: #011827;
+  color: #ffffff;
+  width: 100%;
+  height: 144px;
+}
+header .logo {
+  position: relative;
+  padding: 25px;
+  height: auto;
+  width: 28%;
+}
+header .title {
+  position: relative;
+  display: inline-block;
+  max-width: 100px;
+  right: 20px;
+  bottom: 34px;
+  font-size: 24px;
+}
+header .mobile-menu {
+  float: right;
+  padding: 20px;
+}
+header .menu-line {
+  background: #ffffff;
+  display: block;
+  height: 6px;
+  border-radius: 10%/100%;
+  position: relative;
+  width: 51px;
+  margin-top: 30px;
+}
+header .menu-line::before,
+header .menu-line::after {
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border-radius: 10%/100%;
+}
+header .menu-line::before {
+  top: 15px;
+}
+header .menu-line::after {
+  top: -15px;
+}
+header .side-menu {
+  display: none;
+}
+header .header-menu {
+  visibility: hidden;
+}
+
+.quotes {
+  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
