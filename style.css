@@ -2,20 +2,35 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto";
-  max-width: 480px;
 }
 
+@media only screen and (max-width: 740px) {
+  * {
+    max-width: 100vw;
+  }
+}
 header {
   background-color: #011827;
   color: #ffffff;
   width: 100%;
   height: 144px;
 }
+@media only screen and (min-width: 740px) {
+  header {
+    height: 216px;
+  }
+}
 header .logo {
   position: relative;
   padding: 25px;
   height: auto;
   width: 28%;
+}
+@media only screen and (min-width: 740px) {
+  header .logo {
+    height: auto;
+    width: 128px;
+  }
 }
 header .title {
   position: relative;
@@ -24,6 +39,29 @@ header .title {
   right: 20px;
   bottom: 34px;
   font-size: 24px;
+}
+@media only screen and (min-width: 740px) {
+  header .title {
+    display: inline;
+    font-size: 40px;
+  }
+  header .side-menu {
+    visibility: hidden;
+  }
+  header .mobile-menu {
+    visibility: hidden;
+  }
+  header .header-menu {
+    display: inline-block;
+    padding: 15px;
+  }
+  header .header-menu ul {
+    margin-left: 150px;
+  }
+  header .header-menu a {
+    font-size: 24px;
+    padding: 57px;
+  }
 }
 header .mobile-menu {
   float: right;
@@ -38,29 +76,55 @@ header .menu-line {
   width: 51px;
   margin-top: 30px;
 }
-header .menu-line::before,
+@media only screen and (max-width: 740px) {
+  header .menu-line::before,
 header .menu-line::after {
-  background: #ffffff;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  border-radius: 10%/100%;
-}
-header .menu-line::before {
-  top: 15px;
-}
-header .menu-line::after {
-  top: -15px;
-}
-header .side-menu {
-  display: none;
-}
-header .header-menu {
-  visibility: hidden;
+    background: #ffffff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border-radius: 10%/100%;
+  }
+  header .menu-line::before {
+    top: 15px;
+  }
+  header .menu-line::after {
+    top: -15px;
+  }
+  header .side-menu {
+    display: none;
+  }
+  header .header-menu {
+    visibility: hidden;
+  }
 }
 
+.img-background {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 740px) {
+  .img-background {
+    visibility: hidden;
+    position: absolute;
+  }
+  .img-desktop-background {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .img-desktop-background {
+    visibility: hidden;
+    position: absolute;
+  }
+}
 .blue-button {
   background-color: #8ACFE5;
   color: #011827;
@@ -75,46 +139,112 @@ header .header-menu {
   padding-bottom: 5px;
 }
 
-.red-button {
-  background-color: #ffffff;
-  color: #36769D;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  font-size: 16px;
-  font-weight: bold;
-  display: block;
-  margin: 10px auto;
-  border: none;
+@media only screen and (max-width: 740px) {
+  .red-button {
+    background-color: #ffffff;
+    color: #36769D;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto;
+    border: none;
+  }
 }
-
-.quotes {
-  height: 240px;
+@media only screen and (min-width: 740px) {
+  .challenge-buttons {
+    margin: 0 auto;
+    position: relative;
+    max-width: 633px;
+    display: flex;
+    bottom: 36px;
+  }
+  .challenge-buttons .red-button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 308px;
+    height: 66px;
+    font-size: 24px;
+    display: flexbox;
+    order: 1;
+    margin-right: 8.5px;
+  }
+  .challenge-buttons .blue-button {
+    margin: 0 0 0 8.5px;
+    display: flexbox;
+    order: 2;
+  }
 }
-.quotes .headshotdiv1 {
-  background-color: #ffffff;
+@media only screen and (max-width: 740px) {
+  .quotes {
+    height: 240px;
+    width: auto;
+  }
+  .quotes .headshotdiv1 {
+    background-color: #ffffff;
+  }
+  .quotes .headshotdiv1 .headshot {
+    height: auto;
+    width: 15%;
+    padding: 20px;
+    float: left;
+  }
+  .quotes .headshotdiv1 i {
+    display: inline-block;
+    font-size: 24px;
+    max-width: 340px;
+    margin-top: 20px;
+  }
+  .quotes .headshotdiv1 p {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 110px;
+  }
+  .quotes .headshotdiv2 {
+    visibility: hidden;
+  }
 }
-.quotes .headshotdiv1 .headshot {
-  height: auto;
-  width: 15%;
-  padding: 20px;
-  float: left;
+@media only screen and (min-width: 740px) {
+  .quotes {
+    height: 240px;
+    width: auto;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    margin: 50px auto 0px auto;
+  }
+  .quotes .headshotdiv1, .quotes .headshotdiv2 {
+    background-color: #ffffff;
+    display: flexbox;
+    max-width: 520px;
+  }
+  .quotes .headshotdiv1 .headshot, .quotes .headshotdiv2 .headshot {
+    height: auto;
+    width: 15%;
+    padding: 20px;
+    float: left;
+  }
+  .quotes .headshotdiv1 i, .quotes .headshotdiv2 i {
+    display: inline-block;
+    font-size: 24px;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+  .quotes .headshotdiv1 p, .quotes .headshotdiv2 p {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
-.quotes .headshotdiv1 i {
-  display: inline-block;
-  font-size: 24px;
-  max-width: 340px;
-  margin-top: 20px;
-}
-.quotes .headshotdiv1 p {
-  display: inline-block;
-  font-size: 18px;
-  margin-left: 110px;
-}
-
-.headshotdiv2 {
-  visibility: hidden;
-}
-
 h2 {
   font-size: 32px;
   margin: 0 auto;
@@ -123,22 +253,88 @@ h2 {
   font-weight: 400;
 }
 
+@media only screen and (min-width: 740px) {
+  h2 {
+    margin-bottom: 65px;
+  }
+  .challenges {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  .challenges .challenges1, .challenges .challenges2, .challenges .challenges3 {
+    max-width: 362px;
+  }
+  .challenges .challenges1 button, .challenges .challenges2 button, .challenges .challenges3 button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    margin-left: 170px;
+    margin-top: 20px;
+  }
+  .challenges .challenges1 h5, .challenges .challenges2 h5, .challenges .challenges3 h5 {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 120px;
+    top: -4px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .challenges {
+    margin-left: 50px;
+    overflow-x: auto;
+    justify-content: start;
+  }
+  .challenges h5 {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 10px;
+    top: -4px;
+  }
+  .challenges button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    float: right;
+    margin-right: 18px;
+    margin-top: 18px;
+  }
+  .challenges1, .challenges2, .challenges3 {
+    flex-wrap: wrap;
+  }
+}
 .challenges {
   position: relative;
   background-color: #ffffff;
   display: flex;
   height: 490px;
   width: auto;
-  overflow-x: auto;
-  justify-content: start;
-  margin-left: 50px;
 }
 .challenges .challenges1, .challenges .challenges2, .challenges .challenges3 {
   width: 100%;
   height: 446px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  flex-wrap: wrap;
   margin: 20px;
   -ms-overflow-style: none; /*Hide scrollbar IE and Edge */
   scrollbar-width: none; /* Hide scrollbar Firefox */
@@ -169,33 +365,11 @@ h2 {
   width: 4%;
   margin: 2px;
 }
-.challenges .challenges1 .rating h5, .challenges .challenges2 .rating h5, .challenges .challenges3 .rating h5 {
-  position: relative;
-  font-size: 14px;
-  display: inline-block;
-  font-weight: 400;
-  margin-left: 10px;
-  top: -4px;
-}
 .challenges .challenges1 p, .challenges .challenges2 p, .challenges .challenges3 p {
   font-size: 18px;
   width: 328px;
   margin: 0 auto;
   padding: 17px;
-}
-.challenges .challenges1 button, .challenges .challenges2 button, .challenges .challenges3 button {
-  background-color: #E3170A;
-  color: #ffffff;
-  width: 180px;
-  height: 44px;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  font-size: 16px;
-  font-weight: bold;
-  display: block;
-  float: right;
-  margin-right: 18px;
-  margin-top: 18px;
 }
 
 .challenges::-webkit-scrollbar {
@@ -206,6 +380,36 @@ h2 {
   margin-top: -15px;
 }
 
+@media only screen and (min-width: 740px) {
+  .challenge-buttons-lower {
+    margin: 0 auto;
+    position: relative;
+    max-width: 633px;
+    display: flex;
+  }
+  .challenge-buttons-lower .red-button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 308px;
+    height: 66px;
+    font-size: 24px;
+    display: flexbox;
+    order: 1;
+    margin-right: 8.5px;
+  }
+  .challenge-buttons-lower .blue-button {
+    margin: 0 0 0 8.5px;
+    display: flexbox;
+    order: 2;
+  }
+}
 .story {
   background-color: #011827;
   color: #ffffff;
@@ -218,6 +422,7 @@ h2 {
   margin: 0 auto;
   padding: 95px 20px 20px 20px;
   text-align: center;
+  max-width: 632px;
 }
 .story button {
   background-color: #011827;

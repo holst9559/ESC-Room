@@ -10,8 +10,16 @@ $textcolor: #011827;
     padding: 0;
     margin: 0;
     font-family: "Roboto";
-    max-width: 480px;
 }
+
+@media only screen and (max-width: 740px) {
+    * {
+        max-width: 100vw;
+    }
+}
+
+
+
 
 header {
     background-color: $bgcolor;
@@ -19,11 +27,22 @@ header {
     width: 100%;
     height: 144px;
 
+    @media only screen and (min-width: 740px) {
+            height: 216px;
+    }
+
     .logo {
         position: relative;
         padding: 25px;
         height: auto;
         width: 28%;
+    }
+
+    @media only screen and (min-width: 740px) {
+        .logo {
+            height: auto;
+            width: 128px;
+        }
     }
 
     .title {
@@ -33,6 +52,35 @@ header {
         right: 20px;
         bottom: 34px;
         font-size: 24px;
+    }
+
+    @media only screen and (min-width: 740px) {
+        .title {
+            display: inline;
+            font-size: 40px;
+        }
+
+        .side-menu {
+            visibility: hidden;
+        }
+
+        .mobile-menu {
+            visibility: hidden;
+        }
+
+        .header-menu {
+            display: inline-block;
+            padding: 15px;
+            
+            ul {
+                margin-left: 150px;
+            }
+
+            a {
+                font-size: 24px;
+                padding: 57px;
+            }
+        }   
     }
 
     .mobile-menu {
@@ -50,33 +98,64 @@ header {
         margin-top: 30px;
     }
 
-    .menu-line::before,
-    .menu-line::after{
-        background: #ffffff;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        border-radius: 10%/100%;
-    }   
+    @media only screen and (max-width: 740px) {
+        .menu-line::before,
+        .menu-line::after{
+            background: #ffffff;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            border-radius: 10%/100%;
+        }   
     
-    .menu-line::before{
-        top: 15px;
-    }
+        .menu-line::before{
+            top: 15px;
+        }
     
-    .menu-line::after{
-        top: -15px;
-    }
+        .menu-line::after{
+            top: -15px;
+        }
 
-    .side-menu {
-        display: none;
-    }
+        .side-menu {
+            display: none;
+        }
 
-    .header-menu {
-        visibility: hidden;
+        .header-menu {
+            visibility: hidden;
+        }
     }
 }
+
+.img-background {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 740px) {
+    .img-background {
+        visibility: hidden;
+        position: absolute;
+        
+    }
+
+    .img-desktop-background {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .img-desktop-background {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+    
 
 @mixin blueButton {
     background-color: $buttoncolorblue;
@@ -127,46 +206,115 @@ header {
     display: block;
 }
 
-.blue-button{
+.blue-button {
     @include blueButton();
 }
 
-.red-button {
-    @include redButtonMobile();
+@media only screen and (max-width: 740px) {
+    .red-button {
+        @include redButtonMobile();
+    }
 }
 
-.quotes {
-    height: 240px;
-    .headshotdiv1 {
-        background-color: #ffffff;
-    
-        .headshot {
-            height: auto;
-            width: 15%;
-            padding: 20px;
-            float: left;
-        }
-    
-    
-        i {
-            display: inline-block;
+//Challenge buttons upper desktop
+@media only screen and (min-width: 740px) {
+    .challenge-buttons {
+        margin: 0 auto;
+        position: relative;
+        max-width: 633px;
+        display: flex;
+        bottom: 36px;
+
+        .red-button {
+            @include redButton();
+            width: 308px;
+            height: 66px;
             font-size: 24px;
-            max-width: 340px;
-            margin-top: 20px;
-    
+            display: flexbox;
+            order: 1;
+            margin-right: 8.5px;
         }
     
-        p {
-            display: inline-block;
-            font-size: 18px;
-            margin-left: 110px;
+        .blue-button {
+            margin: 0 0 0 8.5px;
+            display: flexbox;
+            order: 2;
         }
     }
 }
 
+//Quotes mobile
+@media only screen and (max-width: 740px) {
+    .quotes {
+        height: 240px;
+        width: auto;
+        .headshotdiv1 {
+            background-color: #ffffff;
+        
+            .headshot {
+                height: auto;
+                width: 15%;
+                padding: 20px;
+                float: left;
+            }
+        
+            i {
+                display: inline-block;
+                font-size: 24px;
+                max-width: 340px;
+                margin-top: 20px;
+        
+            }
+        
+            p {
+                display: inline-block;
+                font-size: 18px;
+                margin-left: 110px;
+            }
+        }
+        
+        .headshotdiv2 {
+            visibility: hidden;
+        }
+    }
+}
 
-.headshotdiv2 {
-    visibility: hidden;
+//Quotes desktop
+@media only screen and (min-width: 740px) {
+    .quotes {
+        height: 240px;
+        width: auto;
+        max-width: fit-content;
+        display: flex;
+        margin: 50px auto 0px auto;
+
+        .headshotdiv1, .headshotdiv2 {
+            background-color: #ffffff;
+            display: flexbox;
+            max-width: 520px;
+        
+            .headshot {
+                height: auto;
+                width: 15%;
+                padding: 20px;
+                float: left;
+            }
+        
+            i {
+                display: inline-block;
+                font-size: 24px;
+                max-width: 400px;
+                margin-top: 20px;
+        
+            }
+        
+            p {
+                display: inline-block;
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        } 
+    }
 }
 
 h2 {
@@ -177,22 +325,82 @@ h2 {
     font-weight: 400;
 }
 
+
+//Challenge kort desktop
+@media only screen and (min-width: 740px) {
+    h2 {
+        margin-bottom: 65px;
+    }
+    
+    .challenges {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80px;
+        max-width: fit-content;
+        
+        .challenges1, .challenges2, .challenges3 {
+            max-width: 362px;
+
+            button {
+                @include redButton ();
+                position: relative;
+                margin-left: 170px;
+                margin-top: 20px;
+            }
+    
+            h5 {
+                position: relative;
+                font-size: 14px;
+                display: inline-block;
+                font-weight: 400;
+                margin-left: 120px;
+                top: -4px;
+            }
+        } 
+    }
+}
+
+//Challenge kort mobile
+@media only screen and (max-width: 740px) {
+    .challenges {
+        margin-left: 50px;
+        overflow-x: auto;
+        justify-content: start;
+
+        h5 {
+            position: relative;
+            font-size: 14px;
+            display: inline-block;
+            font-weight: 400;
+            margin-left: 10px;
+            top: -4px;
+        }
+        button {
+            @include redButton ();
+            float: right;
+            margin-right: 18px;
+            margin-top: 18px;
+        }
+    }
+
+    .challenges1, .challenges2, .challenges3 {
+        flex-wrap: wrap;
+    } 
+}
+
+//Challenge kort
 .challenges {
     position: relative;
     background-color: #ffffff;
     display: flex;
     height: 490px;
     width: auto;
-    overflow-x: auto;
-    justify-content: start;
-    margin-left: 50px;
 
     .challenges1, .challenges2, .challenges3 {
         width: 100%;
         height: 446px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.25); 
-        flex-wrap: wrap;
         margin: 20px;
         -ms-overflow-style: none;  /*Hide scrollbar IE and Edge */
         scrollbar-width: none;  /* Hide scrollbar Firefox */
@@ -226,15 +434,6 @@ h2 {
                 width: 4%;
                 margin: 2px;
             }
-
-            h5 {
-                position: relative;
-                font-size: 14px;
-                display: inline-block;
-                font-weight: 400;
-                margin-left: 10px;
-                top: -4px;
-            }
         }
 
         p {
@@ -244,12 +443,6 @@ h2 {
             padding: 17px;
         }
 
-        button {
-            @include redButton ();
-            float: right;
-            margin-right: 18px;
-            margin-top: 18px;
-        }
     } 
 }
 
@@ -262,6 +455,35 @@ h2 {
     margin-top: -15px;
 }
 
+
+//Challenge buttons lower desktop
+@media only screen and (min-width: 740px) {
+    .challenge-buttons-lower {
+        margin: 0 auto;
+        position: relative;
+        max-width: 633px;
+        display: flex;
+
+        .red-button {
+            @include redButton();
+            width: 308px;
+            height: 66px;
+            font-size: 24px;
+            display: flexbox;
+            order: 1;
+            margin-right: 8.5px;
+        }
+    
+        .blue-button {
+            margin: 0 0 0 8.5px;
+            display: flexbox;
+            order: 2;
+        }
+    }
+}
+
+
+//Story
 .story {
     background-color: $bgcolor;
     color: #ffffff;
@@ -274,6 +496,7 @@ h2 {
         margin: 0 auto;
         padding: 95px 20px 20px 20px;
         text-align: center;
+        max-width: 632px;
     }
 
     button {

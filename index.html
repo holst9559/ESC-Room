@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", inital-scale="1.0">
         <title>Hacker Escape Room
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,18 +17,26 @@
             <h2 class="title">Hacker Escape Rooms</h2>
             <input class="side-menu" type="checkbox" id="side-menu"/>
             <label class="mobile-menu" for="side-menu"><span class="menu-line"></span></label>
-            <ul class="header-menu">
-                <li>Play Online</li>
-                <li>Play on-site</li>
-                <li>The story</li>
-                <li>Contact us</li>
-            </ul> 
+            <nav class="header-menu">
+                <ul>
+                    <!-- Lägg till a tag istället för li -->
+                    <a>Play Online</a>
+                    <a>Play on-site</a>
+                    <a>The story</a>
+                    <a>Contact us</a>
+                </ul>
+            </nav>
+             
         </header>
 
-        <img src="images/hackerbackground.png">
+        <img class="img-background" src="/images/hackerbackground.png">
+        <img src="images/hackerbackgrounddesktop.png" class="img-desktop-background">
 
-        <button class="blue-button">On-site challenges</button>
-        <button class="red-button">Online challenges</button>
+        <div class="challenge-buttons">
+            <button class="blue-button">On-site challenges</button>
+            <button class="red-button">Online challenges</button>
+        </div>
+        
     
         <div class="quotes" name="quotes">
             <div class="headshotdiv1">
@@ -92,7 +101,7 @@
             </div>   
         </div>
 
-        <div id="challenge-button">
+        <div class="challenge-buttons-lower" id="challenge-button">
             <button class="blue-button">On-site challenges</button>
             <button class="red-button">Online challenges</button>
         </div>
@@ -103,12 +112,12 @@
         </div>
 
         <div class="booking" name="booking">
-            <img src="images/hackerstudy.png">
+            <img class="img-background" src="images/hackerstudy.png">
             <h3>Play with your friends or build your team stronger at work</h3>
             <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
             <button>Book on-site today</button>
 
-            <img src="images/focused.png">
+            <img class="img-background" src="images/focused.png">
             <h3>Play online or visit our venue for one of our 25 escape rooms</h3>
             <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
             <button>See all challenges</button>
