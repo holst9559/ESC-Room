@@ -57,6 +57,7 @@ header .title {
   }
   header .header-menu ul {
     margin-left: 150px;
+    min-width: 1000px;
   }
   header .header-menu a {
     font-size: 24px;
@@ -98,6 +99,7 @@ header .menu-line::after {
   }
   header .header-menu {
     visibility: hidden;
+    position: absolute;
   }
 }
 
@@ -372,6 +374,18 @@ h2 {
   padding: 17px;
 }
 
+@media only screen and (min-width: 740px) {
+  .img-background-lower {
+    width: 640px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .img-background-lower {
+    max-width: 480px;
+    height: auto;
+  }
+}
 .challenges::-webkit-scrollbar {
   display: none;
 }
@@ -438,56 +452,240 @@ h2 {
   padding-bottom: 5px;
 }
 
-.booking {
-  background-color: #ffffff;
+@media only screen and (max-width: 740px) {
+  .booking-upper {
+    background-color: #ffffff;
+  }
+  .booking-upper h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .booking-upper p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+  }
+  .booking-upper button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 308px;
+    height: 66px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin: 21px 21px 64px 21px;
+  }
+  .img-booking-upper img {
+    width: 100%;
+  }
+  .booking-lower {
+    background-color: #ffffff;
+  }
+  .booking-lower h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .booking-lower p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+  }
+  .booking-lower button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 308px;
+    height: 66px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin: 21px 21px 64px 21px;
+  }
+  .img-booking-lower img {
+    width: 100%;
+  }
 }
-.booking h3 {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 auto;
-  padding: 20px;
+@media only screen and (min-width: 740px) {
+  .booking-upper {
+    display: flex;
+    min-width: 1280px;
+  }
+  .booking-upper .img-booking-upper {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    order: 0;
+  }
+  .booking-upper .booking-upper-text {
+    display: inline-block;
+    width: 50%;
+    height: 460px;
+    order: 1;
+  }
+  .booking-upper .booking-upper-text h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding-top: 55px;
+    max-width: 416px;
+  }
+  .booking-upper .booking-upper-text p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 416px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .booking-upper .booking-upper-text button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 308px;
+    height: 66px;
+    margin: 0 auto;
+    font-size: 24px;
+    position: relative;
+    right: 55px;
+  }
+  .booking-lower {
+    min-width: 1280px;
+    display: flex;
+  }
+  .booking-lower .img-booking-lower {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    order: 1;
+  }
+  .booking-lower .booking-lower-text {
+    display: inline-block;
+    width: 50%;
+    height: 460px;
+    order: 0;
+  }
+  .booking-lower .booking-lower-text h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding-top: 55px;
+    max-width: 416px;
+  }
+  .booking-lower .booking-lower-text p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 416px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .booking-lower .booking-lower-text button {
+    background-color: #E3170A;
+    color: #ffffff;
+    width: 180px;
+    height: 44px;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 308px;
+    height: 66px;
+    margin: 0 auto;
+    font-size: 24px;
+    position: relative;
+    right: 55px;
+  }
 }
-.booking p {
-  font-size: 24px;
-  font-weight: 400;
-  margin: 0 auto;
-  padding: 0px 20px 20px 20px;
+@media only screen and (max-width: 740px) {
+  .footer {
+    background-color: #011827;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    height: 566px;
+  }
+  .footer h3 {
+    padding: 64px 22px 0px 22px;
+    font-weight: 700;
+  }
+  .footer p {
+    font-weight: 400;
+    padding: 7px 0px 0px 22px;
+    width: 430px;
+  }
+  .footer ul {
+    font-weight: 700;
+    padding: 40px 0px 10px 22px;
+  }
+  .footer li {
+    font-weight: 400;
+    padding: 0px 0px 0px 22px;
+    list-style-type: none;
+  }
 }
-.booking button {
-  background-color: #E3170A;
-  color: #ffffff;
-  width: 308px;
-  height: 66px;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  font-size: 24px;
-  font-weight: bold;
-  display: block;
-  margin: 21px 21px 64px 21px;
+li {
+  list-style-type: none;
 }
 
-.footer {
-  background-color: #011827;
-  color: #ffffff;
-  font-size: 18px;
-  width: 100%;
-  height: 566px;
-}
-.footer h3 {
-  padding: 64px 22px 0px 22px;
-  font-weight: 700;
-}
-.footer p {
-  font-weight: 400;
-  padding: 7px 0px 0px 22px;
-  width: 430px;
-}
-.footer ul {
-  font-weight: 700;
-  padding: 40px 0px 10px 22px;
-}
-.footer li {
-  font-weight: 400;
-  padding: 0px 0px 0px 22px;
-  list-style-type: none;
+@media only screen and (min-width: 740px) {
+  .footer {
+    background-color: #011827;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    height: 467px;
+    display: flex;
+  }
+  .esc {
+    display: inline-flexbox;
+    padding-top: 110px;
+    padding-left: 110px;
+    flex-grow: 1.5;
+  }
+  .esc h3 {
+    margin-top: 30px;
+  }
+  .esc p {
+    width: 416px;
+    margin-top: 10px;
+  }
+  .site-map {
+    display: inline-flexbo;
+    padding-top: 110px;
+    flex-grow: 1;
+  }
+  .site-map ul {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .site-map ul li {
+    padding-top: 100px;
+  }
+  .follow {
+    display: inline-flexbo;
+    padding-top: 110px;
+    flex-grow: 1.2;
+  }
+  .follow ul {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=style.css.map */
