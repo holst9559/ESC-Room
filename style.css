@@ -208,11 +208,24 @@ header .menu-line::after {
     max-width: 340px;
     margin-top: 20px;
   }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  .quotes .headshotdiv1 i {
+    display: inline-block;
+    font-size: 24px;
+    max-width: 340px;
+    margin-top: 20px;
+    width: 260px;
+  }
+}
+@media only screen and (max-width: 740px) {
   .quotes .headshotdiv1 p {
     display: inline-block;
     font-size: 18px;
     margin-left: 110px;
   }
+}
+@media only screen and (max-width: 740px) {
   .quotes .headshotdiv2 {
     visibility: hidden;
     position: absolute;
@@ -325,6 +338,13 @@ h2 {
     margin-right: 18px;
     margin-top: 18px;
   }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  .challenges p {
+    max-width: 260px;
+  }
+}
+@media only screen and (max-width: 740px) {
   .challenges1, .challenges2, .challenges3 {
     flex-wrap: wrap;
   }
@@ -633,10 +653,24 @@ h2 {
     padding: 7px 0px 0px 22px;
     width: 430px;
   }
+}
+@media only screen and (max-width: 740px) and (max-width: 475px) {
+  .footer p {
+    max-width: 420px;
+  }
+}
+@media only screen and (max-width: 740px) and (max-width: 450px) {
+  .footer p {
+    max-width: 330px;
+  }
+}
+@media only screen and (max-width: 740px) {
   .footer ul {
     font-weight: 700;
     padding: 40px 0px 10px 22px;
   }
+}
+@media only screen and (max-width: 740px) {
   .footer li {
     font-weight: 400;
     padding: 0px 0px 0px 22px;

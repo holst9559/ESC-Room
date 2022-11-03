@@ -267,7 +267,16 @@ header {
                 font-size: 24px;
                 max-width: 340px;
                 margin-top: 20px;
-        
+            }
+
+            @media only screen and (max-width: 450px) {
+                i {
+                    display: inline-block;
+                    font-size: 24px;
+                    max-width: 340px;
+                    margin-top: 20px;
+                    width: 260px;
+                }
             }
         
             p {
@@ -385,7 +394,14 @@ h2 {
             margin-right: 18px;
             margin-top: 18px;
         }
+
+        @media only screen and (max-width: 450px) {
+            p {
+                max-width: 260px ;
+            }
+        }
     }
+    
 
     .challenges1, .challenges2, .challenges3 {
         flex-wrap: wrap;
@@ -642,7 +658,7 @@ h2 {
 
     .booking-lower {
         min-width: 1280px;
-        display:flex;
+        display: flex;
 
         .img-booking-lower {
             width: 50%;
@@ -705,6 +721,18 @@ h2 {
             padding: 7px 0px 0px 22px;
             width: 430px;
         }
+
+        @media only screen and (max-width: 475px) {
+            p {
+                max-width: 420px;
+            }
+        }
+        @media only screen and (max-width: 450px) {
+            p {
+                max-width: 330px;
+            }
+        }
+        
         ul {
             font-weight: 700;
             padding: 40px 0px 10px 22px;
