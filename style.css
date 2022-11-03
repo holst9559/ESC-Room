@@ -52,16 +52,16 @@ header .title {
     visibility: hidden;
   }
   header .header-menu {
-    display: inline-block;
+    display: flex;
     padding: 15px;
   }
   header .header-menu ul {
-    margin-left: 150px;
+    margin: 0 auto;
     min-width: 1000px;
   }
   header .header-menu a {
     font-size: 24px;
-    padding: 57px;
+    padding: 10px 65px 10px 65px;
   }
 }
 header .mobile-menu {
@@ -190,6 +190,8 @@ header .menu-line::after {
     height: auto;
     width: auto;
     max-width: 480px;
+    margin-bottom: 100px;
+    margin-top: 50px;
   }
   .quotes .headshotdiv1 {
     background-color: #ffffff;
