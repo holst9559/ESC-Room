@@ -187,17 +187,18 @@ header .menu-line::after {
 }
 @media only screen and (max-width: 740px) {
   .quotes {
-    height: 240px;
+    height: auto;
     width: auto;
+    max-width: 480px;
   }
   .quotes .headshotdiv1 {
     background-color: #ffffff;
   }
   .quotes .headshotdiv1 .headshot {
+    display: inline-block;
     height: auto;
     width: 15%;
     padding: 20px;
-    float: left;
   }
   .quotes .headshotdiv1 i {
     display: inline-block;
@@ -212,6 +213,7 @@ header .menu-line::after {
   }
   .quotes .headshotdiv2 {
     visibility: hidden;
+    position: absolute;
   }
 }
 @media only screen and (min-width: 740px) {

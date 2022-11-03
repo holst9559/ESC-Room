@@ -246,16 +246,17 @@ header {
 //Quotes mobile
 @media only screen and (max-width: 740px) {
     .quotes {
-        height: 240px;
+        height: auto;
         width: auto;
+        max-width: 480px;
         .headshotdiv1 {
             background-color: #ffffff;
         
             .headshot {
+                display: inline-block;
                 height: auto;
                 width: 15%;
                 padding: 20px;
-                float: left;
             }
         
             i {
@@ -275,6 +276,7 @@ header {
         
         .headshotdiv2 {
             visibility: hidden;
+            position: absolute;
         }
     }
 }
