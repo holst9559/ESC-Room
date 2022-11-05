@@ -157,7 +157,7 @@ header {
     }
 }
     
-
+//Blå knapp
 @mixin blueButton {
     background-color: $buttoncolorblue;
     color: $textcolor;
@@ -171,7 +171,7 @@ header {
     margin: 35px auto;
     padding-bottom: 5px;
 }
-
+//Understrykta knappen på mobile
 @mixin redButtonMobile {
     background-color: #ffffff;
     color: $buttoncolorredmobile;
@@ -182,7 +182,7 @@ header {
     margin: 10px auto;
     border: none;
 }
-
+//Röda knappen
 @mixin redButton {
     background-color: $buttoncolorred;
     color: #ffffff;
@@ -194,7 +194,7 @@ header {
     font-weight: bold;
     display: block;
 }
-
+//Röda knappen mobile
 @mixin redButtonBig {
     background-color: $buttoncolorred;
     color: #ffffff;
