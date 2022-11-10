@@ -164,7 +164,7 @@ header .menu-line::after {
   header .ham-menu ul .close-btn {
     display: block;
     position: absolute;
-    background-image: url("./close.png");
+    background-image: url("./close.PNG");
     background-size: cover;
     width: 30px;
     height: 30px;
