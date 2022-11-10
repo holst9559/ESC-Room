@@ -11,6 +11,7 @@ $textcolor: #011827;
     font-family: "Roboto";
 }
 
+
 @media only screen and (max-width: 740px) {
     * {
         max-width: 100vw;
@@ -121,8 +122,68 @@ header {
         }
 
         .header-menu {
-            visibility: hidden;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                scale: 0.97;
+            }
+            100% {
+                scale: 1;
+            }
+        }
+
+        //Design för menyn på mobile.
+        .ham-menu {
+            display: block;
+            animation: fadeIn 0.5s;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 100%;
             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+
+            ul {
+                display: flex;
+                position: relative;
+                background-color: $bgcolor;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 95vh;
+                animation: scaleIn 0.5s;
+            
+                a {
+                    font-size: 36px;
+                    font-weight: 700;
+                    padding: 25px;
+                }
+
+                .close-btn {
+                    display: block;
+                    position: absolute;
+                    background-image: url("/close.png");
+                    background-size: cover;
+                    width: 30px;
+                    height: 30px;
+                    top: 20px;
+                    right: 20px;
+                
+                }
+            }
         }
     }
 }
